@@ -8,11 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		5172D91F1AE5AB8500436944 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172D91E1AE5AB8500436944 /* AppDelegate.swift */; };
-		5172D9211AE5AB8500436944 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172D9201AE5AB8500436944 /* ViewController.swift */; };
 		5172D9241AE5AB8500436944 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5172D9221AE5AB8500436944 /* Main.storyboard */; };
 		5172D9261AE5AB8500436944 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5172D9251AE5AB8500436944 /* Images.xcassets */; };
 		5172D9291AE5AB8500436944 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5172D9271AE5AB8500436944 /* LaunchScreen.xib */; };
 		5172D9351AE5AB8500436944 /* Jarvis_iOS_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172D9341AE5AB8500436944 /* Jarvis_iOS_SwiftTests.swift */; };
+		5172D9471AE6D00B00436944 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172D9461AE6D00B00436944 /* Session.swift */; };
+		5172D9491AE6D37C00436944 /* Browser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172D9481AE6D37C00436944 /* Browser.swift */; };
+		5172D94D1AE6D4D900436944 /* MultipeerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172D94C1AE6D4D900436944 /* MultipeerController.swift */; };
+		5172D9511AE6D94B00436944 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172D9501AE6D94B00436944 /* BaseViewController.swift */; };
+		5172D9541AE6E58300436944 /* MotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172D9531AE6E58300436944 /* MotionViewController.swift */; };
+		5172D9571AE6F01C00436944 /* TouchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172D9561AE6F01C00436944 /* TouchViewController.swift */; };
+		5172D9591AE6F3EB00436944 /* MotionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172D9581AE6F3EB00436944 /* MotionController.swift */; };
+		5172D95F1AE6F7A100436944 /* MessageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172D95E1AE6F7A100436944 /* MessageConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +36,20 @@
 		5172D9191AE5AB8500436944 /* Jarvis-iOS-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jarvis-iOS-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5172D91D1AE5AB8500436944 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5172D91E1AE5AB8500436944 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5172D9201AE5AB8500436944 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5172D9231AE5AB8500436944 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5172D9251AE5AB8500436944 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5172D9281AE5AB8500436944 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		5172D92E1AE5AB8500436944 /* Jarvis-iOS-SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Jarvis-iOS-SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5172D9331AE5AB8500436944 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5172D9341AE5AB8500436944 /* Jarvis_iOS_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jarvis_iOS_SwiftTests.swift; sourceTree = "<group>"; };
+		5172D9461AE6D00B00436944 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		5172D9481AE6D37C00436944 /* Browser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Browser.swift; sourceTree = "<group>"; };
+		5172D94C1AE6D4D900436944 /* MultipeerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipeerController.swift; sourceTree = "<group>"; };
+		5172D9501AE6D94B00436944 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		5172D9531AE6E58300436944 /* MotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionViewController.swift; sourceTree = "<group>"; };
+		5172D9561AE6F01C00436944 /* TouchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchViewController.swift; sourceTree = "<group>"; };
+		5172D9581AE6F3EB00436944 /* MotionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionController.swift; sourceTree = "<group>"; };
+		5172D95E1AE6F7A100436944 /* MessageConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +92,10 @@
 			isa = PBXGroup;
 			children = (
 				5172D91E1AE5AB8500436944 /* AppDelegate.swift */,
-				5172D9201AE5AB8500436944 /* ViewController.swift */,
+				5172D95E1AE6F7A100436944 /* MessageConstants.swift */,
+				5172D9551AE6EF7F00436944 /* ViewControllers */,
+				5172D9521AE6E2D800436944 /* Models */,
+				5172D9601AE8245000436944 /* ModelControllers */,
 				5172D9221AE5AB8500436944 /* Main.storyboard */,
 				5172D9251AE5AB8500436944 /* Images.xcassets */,
 				5172D9271AE5AB8500436944 /* LaunchScreen.xib */,
@@ -110,6 +127,34 @@
 				5172D9331AE5AB8500436944 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5172D9521AE6E2D800436944 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5172D9461AE6D00B00436944 /* Session.swift */,
+				5172D9481AE6D37C00436944 /* Browser.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		5172D9551AE6EF7F00436944 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5172D9501AE6D94B00436944 /* BaseViewController.swift */,
+				5172D9531AE6E58300436944 /* MotionViewController.swift */,
+				5172D9561AE6F01C00436944 /* TouchViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5172D9601AE8245000436944 /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5172D9581AE6F3EB00436944 /* MotionController.swift */,
+				5172D94C1AE6D4D900436944 /* MultipeerController.swift */,
+			);
+			name = ModelControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,7 +202,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0630;
-				ORGANIZATIONNAME = "Kyle Yoon";
+				ORGANIZATIONNAME = Vokal;
 				TargetAttributes = {
 					5172D9181AE5AB8500436944 = {
 						CreatedOnToolsVersion = 6.3;
@@ -212,8 +257,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5172D9211AE5AB8500436944 /* ViewController.swift in Sources */,
+				5172D9511AE6D94B00436944 /* BaseViewController.swift in Sources */,
+				5172D94D1AE6D4D900436944 /* MultipeerController.swift in Sources */,
+				5172D9541AE6E58300436944 /* MotionViewController.swift in Sources */,
+				5172D9591AE6F3EB00436944 /* MotionController.swift in Sources */,
+				5172D9571AE6F01C00436944 /* TouchViewController.swift in Sources */,
+				5172D9491AE6D37C00436944 /* Browser.swift in Sources */,
+				5172D95F1AE6F7A100436944 /* MessageConstants.swift in Sources */,
 				5172D91F1AE5AB8500436944 /* AppDelegate.swift in Sources */,
+				5172D9471AE6D00B00436944 /* Session.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +397,7 @@
 				INFOPLIST_FILE = "Jarvis-iOS-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -355,6 +408,7 @@
 				INFOPLIST_FILE = "Jarvis-iOS-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -411,6 +465,7 @@
 				5172D93A1AE5AB8500436944 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5172D93B1AE5AB8500436944 /* Build configuration list for PBXNativeTarget "Jarvis-iOS-SwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +474,7 @@
 				5172D93D1AE5AB8500436944 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

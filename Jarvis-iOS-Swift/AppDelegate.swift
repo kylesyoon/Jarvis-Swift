@@ -3,7 +3,7 @@
 //  Jarvis-iOS-Swift
 //
 //  Created by Kyle Yoon on 4/20/15.
-//  Copyright (c) 2015 Kyle Yoon. All rights reserved.
+//  Copyright (c) 2015 Vokal. All rights reserved.
 //
 
 import UIKit
