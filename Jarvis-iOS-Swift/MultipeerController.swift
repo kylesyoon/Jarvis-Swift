@@ -51,6 +51,7 @@ class MultipeerController: SessionDelegate, BrowserDelegate {
     
     func didChangeState(state: MCSessionState, peer peerID: MCPeerID, forSession session: MCSession) {
         self.delegate?.didChangeState(state, peer: peerID, forSession: session)
+        self.setIdleTimerForState(state)
     }
     
     // MARK: BrowserDelegate
@@ -82,5 +83,15 @@ class MultipeerController: SessionDelegate, BrowserDelegate {
         }
         
         return isQueued
+    }
+    
+    // MARK: Idle Timer
+    
+    func setIdleTimerForState(state: MCSessionState) {
+        if state == MCSessionState.Connected {
+            UIApplication.sharedApplication().idleTimerDisabled = true
+        } else {
+            UIApplication.sharedApplication().idleTimerDisabled = false
+        }
     }
 }

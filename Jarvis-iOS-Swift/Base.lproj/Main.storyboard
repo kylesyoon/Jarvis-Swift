@@ -28,17 +28,6 @@
                                     <action selector="pressedRefresh" destination="BYZ-38-t0r" eventType="touchUpInside" id="QAA-kR-FO5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QV5-bO-4SE">
-                                <rect key="frame" x="16" y="20" width="49" height="34"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="18"/>
-                                <state key="normal" title="TOUCH">
-                                    <color key="titleColor" red="0.72941176470000002" green="0.89411764709999997" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="fmH-PT-bwS" kind="show" id="9Vo-5T-ANN"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle2" translatesAutoresizingMaskIntoConstraints="NO" id="xyE-fD-tYh">
                                 <rect key="frame" x="175" y="175" width="250" height="250"/>
                                 <constraints>
@@ -52,6 +41,17 @@
                                 <color key="textColor" red="0.72941176470000002" green="0.89411764709999997" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QV5-bO-4SE">
+                                <rect key="frame" x="16" y="20" width="49" height="34"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="TOUCH">
+                                    <color key="titleColor" red="0.72941176470000002" green="0.89411764709999997" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="fmH-PT-bwS" kind="custom" customClass="CrossFadeSegue" customModule="Jarvis_iOS_Swift" customModuleProvider="target" id="9Vo-5T-ANN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.14901960784313725" green="0.15686274509803921" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -67,6 +67,8 @@
                     </view>
                     <connections>
                         <outlet property="connectionLabel" destination="j9W-bH-OCe" id="TnI-fQ-U3b"/>
+                        <outlet property="refreshButton" destination="pkV-Vx-3gw" id="NAg-lZ-lhs"/>
+                        <outlet property="touchButton" destination="QV5-bO-4SE" id="S2r-LX-UzL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -102,14 +104,6 @@
                                     <action selector="pressedRefresh" destination="fmH-PT-bwS" eventType="touchUpInside" id="bHO-mH-i34"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KYV-Kg-q3b">
-                                <rect key="frame" x="16" y="20" width="57" height="34"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="18"/>
-                                <state key="normal" title="MOTION">
-                                    <color key="titleColor" red="0.72941176470000002" green="0.89411764709999997" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Connected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijh-In-qEe">
                                 <rect key="frame" x="16" y="62" width="568" height="19"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
@@ -144,13 +138,24 @@
                                     <action selector="pressedESC" destination="fmH-PT-bwS" eventType="touchUpInside" id="UJD-a0-eIc"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h36-2k-9XN">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h36-2k-9XN" userLabel="separator">
                                 <rect key="frame" x="0.0" y="524" width="600" height="1"/>
                                 <color key="backgroundColor" red="0.72941176470000002" green="0.89411764709999997" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="LgJ-YI-saG"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KYV-Kg-q3b">
+                                <rect key="frame" x="16" y="20" width="57" height="34"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="MOTION">
+                                    <color key="titleColor" red="0.72941176470000002" green="0.89411764709999997" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="custom" customClass="CrossFadeSegue" customModule="Jarvis_iOS_Swift" id="MmZ-UZ-PCh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.14901960784313725" green="0.15686274509803921" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
@@ -180,7 +185,6 @@
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="connectionLabel" destination="ijh-In-qEe" id="MfU-oe-GIH"/>
                         <outlet property="swipeDownGestureRecognizer" destination="WGR-uL-k7d" id="hFh-Ta-VNU"/>
                         <outlet property="swipeLabel" destination="hEW-UE-fV9" id="E08-tA-AIl"/>
                         <outlet property="swipeUpGestureRecognizer" destination="Net-mz-ofg" id="625-ph-psZ"/>

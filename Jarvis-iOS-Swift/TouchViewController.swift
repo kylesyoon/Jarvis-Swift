@@ -13,6 +13,7 @@ class TouchViewController: BaseViewController {
    
     @IBOutlet weak var swipeLabel: UILabel!
     @IBOutlet weak var connectionLabel: UILabel!
+    @IBOutlet var crossFadeViews: Array<UIView>!
     @IBOutlet var swipeUpGestureRecognizer: UISwipeGestureRecognizer!
     @IBOutlet var swipeDownGestureRecognizer: UISwipeGestureRecognizer!
     
