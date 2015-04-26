@@ -11,19 +11,26 @@
 		5172D9241AE5AB8500436944 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5172D9221AE5AB8500436944 /* Main.storyboard */; };
 		5172D9261AE5AB8500436944 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5172D9251AE5AB8500436944 /* Images.xcassets */; };
 		5172D9291AE5AB8500436944 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5172D9271AE5AB8500436944 /* LaunchScreen.xib */; };
-		5172D9351AE5AB8500436944 /* Jarvis_iOS_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172D9341AE5AB8500436944 /* Jarvis_iOS_SwiftTests.swift */; };
-		5172D9471AE6D00B00436944 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172D9461AE6D00B00436944 /* Session.swift */; };
-		5172D9491AE6D37C00436944 /* Browser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172D9481AE6D37C00436944 /* Browser.swift */; };
-		5172D94D1AE6D4D900436944 /* MultipeerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172D94C1AE6D4D900436944 /* MultipeerController.swift */; };
-		5172D9511AE6D94B00436944 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172D9501AE6D94B00436944 /* BaseViewController.swift */; };
-		5172D9541AE6E58300436944 /* MotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172D9531AE6E58300436944 /* MotionViewController.swift */; };
-		5172D9571AE6F01C00436944 /* TouchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172D9561AE6F01C00436944 /* TouchViewController.swift */; };
-		5172D9591AE6F3EB00436944 /* MotionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172D9581AE6F3EB00436944 /* MotionController.swift */; };
-		5172D95F1AE6F7A100436944 /* MessageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172D95E1AE6F7A100436944 /* MessageConstants.swift */; };
-		5172D9621AE83AC200436944 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172D9611AE83AC200436944 /* GradientView.swift */; };
-		5172D9651AE840E100436944 /* JarvisColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172D9641AE840E100436944 /* JarvisColors.swift */; };
-		5172D9671AE84AD700436944 /* CrossFadeSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172D9661AE84AD700436944 /* CrossFadeSegue.swift */; };
-		5191B6521AEC19E60042E758 /* JARLocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191B6511AEC19E60042E758 /* JARLocalizedStrings.swift */; };
+		5172D9471AE6D00B00436944 /* JARSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172D9461AE6D00B00436944 /* JARSession.swift */; };
+		5172D9491AE6D37C00436944 /* JARBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172D9481AE6D37C00436944 /* JARBrowser.swift */; };
+		5172D94D1AE6D4D900436944 /* JARMultipeerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172D94C1AE6D4D900436944 /* JARMultipeerController.swift */; };
+		5172D9511AE6D94B00436944 /* JARBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172D9501AE6D94B00436944 /* JARBaseViewController.swift */; };
+		5172D9541AE6E58300436944 /* JARMotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172D9531AE6E58300436944 /* JARMotionViewController.swift */; };
+		5172D9571AE6F01C00436944 /* JARTouchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172D9561AE6F01C00436944 /* JARTouchViewController.swift */; };
+		5172D9591AE6F3EB00436944 /* JARMotionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172D9581AE6F3EB00436944 /* JARMotionController.swift */; };
+		5172D95F1AE6F7A100436944 /* JARMessageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172D95E1AE6F7A100436944 /* JARMessageConstants.swift */; };
+		5172D9621AE83AC200436944 /* JARGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172D9611AE83AC200436944 /* JARGradientView.swift */; };
+		5172D9651AE840E100436944 /* UIColors+Jarvis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172D9641AE840E100436944 /* UIColors+Jarvis.swift */; };
+		5172D9671AE84AD700436944 /* JARCrossFadeSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172D9661AE84AD700436944 /* JARCrossFadeSegue.swift */; };
+		5194B2D01AEC84F40067767E /* JarvisBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5194B2CF1AEC84F40067767E /* JarvisBaseTests.swift */; };
+		5194B2D21AECB6E30067767E /* JarvisMultipeerConnectivityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5194B2D11AECB6E30067767E /* JarvisMultipeerConnectivityTests.swift */; };
+		51E1ED511AED294700877AE1 /* JARTestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E1ED501AED294700877AE1 /* JARTestHelper.swift */; };
+		51E1ED521AED2BEB00877AE1 /* JARTestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E1ED501AED294700877AE1 /* JARTestHelper.swift */; };
+		51E1ED531AED2C4900877AE1 /* JARMultipeerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172D94C1AE6D4D900436944 /* JARMultipeerController.swift */; };
+		51E1ED541AED3DD400877AE1 /* JARBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172D9481AE6D37C00436944 /* JARBrowser.swift */; };
+		51E1ED551AED3DD600877AE1 /* JARSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172D9461AE6D00B00436944 /* JARSession.swift */; };
+		51E1ED561AED3FA600877AE1 /* JARMessageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172D95E1AE6F7A100436944 /* JARMessageConstants.swift */; };
+		51F90F2A1AEC68ED003763D3 /* JARLocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F90F291AEC68ED003763D3 /* JARLocalizedStrings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,19 +52,21 @@
 		5172D9281AE5AB8500436944 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		5172D92E1AE5AB8500436944 /* Jarvis-iOS-SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Jarvis-iOS-SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5172D9331AE5AB8500436944 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5172D9341AE5AB8500436944 /* Jarvis_iOS_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jarvis_iOS_SwiftTests.swift; sourceTree = "<group>"; };
-		5172D9461AE6D00B00436944 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
-		5172D9481AE6D37C00436944 /* Browser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Browser.swift; sourceTree = "<group>"; };
-		5172D94C1AE6D4D900436944 /* MultipeerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipeerController.swift; sourceTree = "<group>"; };
-		5172D9501AE6D94B00436944 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		5172D9531AE6E58300436944 /* MotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionViewController.swift; sourceTree = "<group>"; };
-		5172D9561AE6F01C00436944 /* TouchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchViewController.swift; sourceTree = "<group>"; };
-		5172D9581AE6F3EB00436944 /* MotionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionController.swift; sourceTree = "<group>"; };
-		5172D95E1AE6F7A100436944 /* MessageConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageConstants.swift; sourceTree = "<group>"; };
-		5172D9611AE83AC200436944 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
-		5172D9641AE840E100436944 /* JarvisColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JarvisColors.swift; sourceTree = "<group>"; };
-		5172D9661AE84AD700436944 /* CrossFadeSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossFadeSegue.swift; sourceTree = "<group>"; };
-		5191B6511AEC19E60042E758 /* JARLocalizedStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JARLocalizedStrings.swift; sourceTree = "<group>"; };
+		5172D9461AE6D00B00436944 /* JARSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JARSession.swift; sourceTree = "<group>"; };
+		5172D9481AE6D37C00436944 /* JARBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JARBrowser.swift; sourceTree = "<group>"; };
+		5172D94C1AE6D4D900436944 /* JARMultipeerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JARMultipeerController.swift; sourceTree = "<group>"; };
+		5172D9501AE6D94B00436944 /* JARBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JARBaseViewController.swift; sourceTree = "<group>"; };
+		5172D9531AE6E58300436944 /* JARMotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JARMotionViewController.swift; sourceTree = "<group>"; };
+		5172D9561AE6F01C00436944 /* JARTouchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JARTouchViewController.swift; sourceTree = "<group>"; };
+		5172D9581AE6F3EB00436944 /* JARMotionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JARMotionController.swift; sourceTree = "<group>"; };
+		5172D95E1AE6F7A100436944 /* JARMessageConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JARMessageConstants.swift; sourceTree = "<group>"; };
+		5172D9611AE83AC200436944 /* JARGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JARGradientView.swift; sourceTree = "<group>"; };
+		5172D9641AE840E100436944 /* UIColors+Jarvis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColors+Jarvis.swift"; sourceTree = "<group>"; };
+		5172D9661AE84AD700436944 /* JARCrossFadeSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JARCrossFadeSegue.swift; sourceTree = "<group>"; };
+		5194B2CF1AEC84F40067767E /* JarvisBaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JarvisBaseTests.swift; sourceTree = "<group>"; };
+		5194B2D11AECB6E30067767E /* JarvisMultipeerConnectivityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JarvisMultipeerConnectivityTests.swift; sourceTree = "<group>"; };
+		51E1ED501AED294700877AE1 /* JARTestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JARTestHelper.swift; sourceTree = "<group>"; };
+		51F90F291AEC68ED003763D3 /* JARLocalizedStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JARLocalizedStrings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,14 +109,12 @@
 			isa = PBXGroup;
 			children = (
 				5172D91E1AE5AB8500436944 /* AppDelegate.swift */,
-				5172D95E1AE6F7A100436944 /* MessageConstants.swift */,
-				5191B6511AEC19E60042E758 /* JARLocalizedStrings.swift */,
 				5172D9631AE83AD100436944 /* Views */,
 				5172D9551AE6EF7F00436944 /* ViewControllers */,
 				5191B6501AEAC2EE0042E758 /* Segues */,
 				5172D9521AE6E2D800436944 /* Models */,
 				5172D9601AE8245000436944 /* ModelControllers */,
-				5172D9641AE840E100436944 /* JarvisColors.swift */,
+				51F90F2B1AEC747B003763D3 /* Helpers */,
 				5172D9221AE5AB8500436944 /* Main.storyboard */,
 				5172D9251AE5AB8500436944 /* Images.xcassets */,
 				5172D9271AE5AB8500436944 /* LaunchScreen.xib */,
@@ -127,7 +134,8 @@
 		5172D9311AE5AB8500436944 /* Jarvis-iOS-SwiftTests */ = {
 			isa = PBXGroup;
 			children = (
-				5172D9341AE5AB8500436944 /* Jarvis_iOS_SwiftTests.swift */,
+				5194B2CF1AEC84F40067767E /* JarvisBaseTests.swift */,
+				5194B2D11AECB6E30067767E /* JarvisMultipeerConnectivityTests.swift */,
 				5172D9321AE5AB8500436944 /* Supporting Files */,
 			);
 			path = "Jarvis-iOS-SwiftTests";
@@ -144,8 +152,8 @@
 		5172D9521AE6E2D800436944 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5172D9461AE6D00B00436944 /* Session.swift */,
-				5172D9481AE6D37C00436944 /* Browser.swift */,
+				5172D9461AE6D00B00436944 /* JARSession.swift */,
+				5172D9481AE6D37C00436944 /* JARBrowser.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -153,9 +161,9 @@
 		5172D9551AE6EF7F00436944 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				5172D9501AE6D94B00436944 /* BaseViewController.swift */,
-				5172D9531AE6E58300436944 /* MotionViewController.swift */,
-				5172D9561AE6F01C00436944 /* TouchViewController.swift */,
+				5172D9501AE6D94B00436944 /* JARBaseViewController.swift */,
+				5172D9531AE6E58300436944 /* JARMotionViewController.swift */,
+				5172D9561AE6F01C00436944 /* JARTouchViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -163,8 +171,8 @@
 		5172D9601AE8245000436944 /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
-				5172D9581AE6F3EB00436944 /* MotionController.swift */,
-				5172D94C1AE6D4D900436944 /* MultipeerController.swift */,
+				5172D9581AE6F3EB00436944 /* JARMotionController.swift */,
+				5172D94C1AE6D4D900436944 /* JARMultipeerController.swift */,
 			);
 			name = ModelControllers;
 			sourceTree = "<group>";
@@ -172,7 +180,7 @@
 		5172D9631AE83AD100436944 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5172D9611AE83AC200436944 /* GradientView.swift */,
+				5172D9611AE83AC200436944 /* JARGradientView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -180,9 +188,20 @@
 		5191B6501AEAC2EE0042E758 /* Segues */ = {
 			isa = PBXGroup;
 			children = (
-				5172D9661AE84AD700436944 /* CrossFadeSegue.swift */,
+				5172D9661AE84AD700436944 /* JARCrossFadeSegue.swift */,
 			);
 			name = Segues;
+			sourceTree = "<group>";
+		};
+		51F90F2B1AEC747B003763D3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5172D9641AE840E100436944 /* UIColors+Jarvis.swift */,
+				5172D95E1AE6F7A100436944 /* JARMessageConstants.swift */,
+				51F90F291AEC68ED003763D3 /* JARLocalizedStrings.swift */,
+				51E1ED501AED294700877AE1 /* JARTestHelper.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +253,7 @@
 				TargetAttributes = {
 					5172D9181AE5AB8500436944 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = EG77NM7886;
 					};
 					5172D92D1AE5AB8500436944 = {
 						CreatedOnToolsVersion = 6.3;
@@ -285,19 +305,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5172D9511AE6D94B00436944 /* BaseViewController.swift in Sources */,
-				5191B6521AEC19E60042E758 /* JARLocalizedStrings.swift in Sources */,
-				5172D94D1AE6D4D900436944 /* MultipeerController.swift in Sources */,
-				5172D9621AE83AC200436944 /* GradientView.swift in Sources */,
-				5172D9541AE6E58300436944 /* MotionViewController.swift in Sources */,
-				5172D9591AE6F3EB00436944 /* MotionController.swift in Sources */,
-				5172D9651AE840E100436944 /* JarvisColors.swift in Sources */,
-				5172D9571AE6F01C00436944 /* TouchViewController.swift in Sources */,
-				5172D9491AE6D37C00436944 /* Browser.swift in Sources */,
-				5172D95F1AE6F7A100436944 /* MessageConstants.swift in Sources */,
+				5172D9511AE6D94B00436944 /* JARBaseViewController.swift in Sources */,
+				51F90F2A1AEC68ED003763D3 /* JARLocalizedStrings.swift in Sources */,
+				5172D94D1AE6D4D900436944 /* JARMultipeerController.swift in Sources */,
+				5172D9621AE83AC200436944 /* JARGradientView.swift in Sources */,
+				5172D9541AE6E58300436944 /* JARMotionViewController.swift in Sources */,
+				51E1ED511AED294700877AE1 /* JARTestHelper.swift in Sources */,
+				5172D9591AE6F3EB00436944 /* JARMotionController.swift in Sources */,
+				5172D9651AE840E100436944 /* UIColors+Jarvis.swift in Sources */,
+				5172D9571AE6F01C00436944 /* JARTouchViewController.swift in Sources */,
+				5172D9491AE6D37C00436944 /* JARBrowser.swift in Sources */,
+				5172D95F1AE6F7A100436944 /* JARMessageConstants.swift in Sources */,
 				5172D91F1AE5AB8500436944 /* AppDelegate.swift in Sources */,
-				5172D9671AE84AD700436944 /* CrossFadeSegue.swift in Sources */,
-				5172D9471AE6D00B00436944 /* Session.swift in Sources */,
+				5172D9671AE84AD700436944 /* JARCrossFadeSegue.swift in Sources */,
+				5172D9471AE6D00B00436944 /* JARSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +326,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5172D9351AE5AB8500436944 /* Jarvis_iOS_SwiftTests.swift in Sources */,
+				51E1ED551AED3DD600877AE1 /* JARSession.swift in Sources */,
+				51E1ED521AED2BEB00877AE1 /* JARTestHelper.swift in Sources */,
+				5194B2D21AECB6E30067767E /* JarvisMultipeerConnectivityTests.swift in Sources */,
+				51E1ED561AED3FA600877AE1 /* JARMessageConstants.swift in Sources */,
+				5194B2D01AEC84F40067767E /* JarvisBaseTests.swift in Sources */,
+				51E1ED531AED2C4900877AE1 /* JARMultipeerController.swift in Sources */,
+				51E1ED541AED3DD400877AE1 /* JARBrowser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,9 +453,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Jarvis-iOS-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -437,9 +467,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Jarvis-iOS-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

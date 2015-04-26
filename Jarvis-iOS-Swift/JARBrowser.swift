@@ -1,5 +1,5 @@
 //
-//  Browser.swift
+//  JARBrowser.swift
 //  Jarvis-iOS-Swift
 //
 //  Created by Kyle Yoon on 4/21/15.
@@ -9,21 +9,23 @@
 import UIKit
 import MultipeerConnectivity
 
-protocol BrowserDelegate {
+protocol JARBrowserDelegate {
     func foundPeer(peerID: MCPeerID)
 }
 
-class Browser: NSObject, MCNearbyServiceBrowserDelegate {
+class JARBrowser: NSObject, MCNearbyServiceBrowserDelegate {
     
     let mcSession: MCSession
-    var delegate: BrowserDelegate?
+    var delegate: JARBrowserDelegate?
     var currentPeer: MCPeerID?
     
-    init(mcSession: MCSession, delegate: BrowserDelegate? = nil) {
+    init(mcSession: MCSession, delegate: JARBrowserDelegate? = nil) {
         self.mcSession = mcSession
         self.delegate = delegate
         super.init()
     }
+    
+    // MARK: MCNearbyServiceBrowserDelegate
     
     var mcBrowser: MCNearbyServiceBrowser?
    
@@ -40,10 +42,13 @@ class Browser: NSObject, MCNearbyServiceBrowserDelegate {
     }
     
     func browser(browser: MCNearbyServiceBrowser!, foundPeer peerID: MCPeerID!, withDiscoveryInfo info: [NSObject : AnyObject]!) {
-        self.delegate?.foundPeer(peerID)
+        if currentPeer != peerID {
+            self.delegate?.foundPeer(peerID)
+        }
     }
     
     func browser(browser: MCNearbyServiceBrowser!, lostPeer peerID: MCPeerID!) {
         // Unused
     }
+    
 }

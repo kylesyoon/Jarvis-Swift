@@ -1,5 +1,5 @@
 //
-//  GradientView.swift
+//  JARJARGradientView.swift
 //  Jarvis-iOS-Swift
 //
 //  Created by Kyle Yoon on 4/22/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GradientView: UIView {
+class JARGradientView: UIView {
     
     var locations: [CGFloat] = []
     var colors: CFArray = []
@@ -26,7 +26,7 @@ class GradientView: UIView {
     }
 }
 
-class ConnectedGradientView: GradientView {
+class JARConnectedGradientView: JARGradientView {
     
     override func drawRect(rect: CGRect) {
         self.colors = [UIColor.whiteColor().CGColor, UIColor.whiteColor().CGColor, UIColor.jarvis_lightBlue().CGColor, UIColor.jarvis_gunMetal().CGColor]
@@ -37,7 +37,7 @@ class ConnectedGradientView: GradientView {
     
 }
 
-class MotionDetectedGradientView: GradientView {
+class JARMotionDetectedGradientView: JARGradientView {
     
     override func drawRect(rect: CGRect) {
         self.colors = [UIColor.whiteColor().CGColor, UIColor.whiteColor().CGColor, UIColor.jarvis_lightBlue().CGColor, UIColor.whiteColor().CGColor]

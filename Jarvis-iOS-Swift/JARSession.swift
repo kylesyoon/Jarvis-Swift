@@ -1,5 +1,5 @@
 //
-//  Session.swift
+//  JARSession.swift
 //  Jarvis-iOS-Swift
 //
 //  Created by Kyle Yoon on 4/21/15.
@@ -9,18 +9,18 @@
 import UIKit
 import MultipeerConnectivity
 
-protocol SessionDelegate {
+protocol JARSessionDelegate {
     func didChangeState(state: MCSessionState, peer peerID: MCPeerID, forSession session: MCSession)
 }
 
-class Session: NSObject, MCSessionDelegate {
+class JARSession: NSObject, MCSessionDelegate {
     
     var myPeerID: MCPeerID
-    var delegate: SessionDelegate?
+    var delegate: JARSessionDelegate?
     var mcSession: MCSession
     var currentState: MCSessionState!
     
-    init(displayName: String, delegate: SessionDelegate? = nil) {
+    init(displayName: String, delegate: JARSessionDelegate? = nil) {
         self.myPeerID = MCPeerID(displayName: UIDevice.currentDevice().name)
         self.delegate = delegate
         self.mcSession = MCSession(peer: myPeerID)

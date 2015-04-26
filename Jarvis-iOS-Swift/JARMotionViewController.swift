@@ -1,5 +1,5 @@
 //
-//  MotionViewController.swift
+//  JARMotionViewController.swift
 //  Jarvis-iOS-Swift
 //
 //  Created by Kyle Yoon on 4/21/15.
@@ -9,18 +9,17 @@
 import UIKit
 import MultipeerConnectivity
 
-class MotionViewController: BaseViewController, MotionDelegate {
+class JARMotionViewController: JARBaseViewController, JARMotionDelegate {
     
     @IBOutlet weak var refreshButton: UIButton!
     @IBOutlet weak var touchButton: UIButton!
     @IBOutlet weak var connectionLabel: UILabel!
-    @IBOutlet var crossFadeViews: Array<UIView>! // TODO: Might not need this.
-    let motionController = MotionController()
+    let motionController = JARMotionController()
     let showMotionDetectedAnimationDuration = 0.25
     let hideMotionDetectedAnimationDuration = 0.5
     let connectedAnimationDuration = 0.5
-    var connectedGradientView: ConnectedGradientView?
-    var motionDetectedGradientView: MotionDetectedGradientView?
+    var connectedGradientView: JARConnectedGradientView?
+    var motionDetectedGradientView: JARMotionDetectedGradientView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +29,7 @@ class MotionViewController: BaseViewController, MotionDelegate {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
+        // Keep these in front
         self.view.bringSubviewToFront(self.connectionLabel)
         self.view.bringSubviewToFront(self.refreshButton)
         self.view.bringSubviewToFront(self.touchButton)
@@ -45,36 +44,43 @@ class MotionViewController: BaseViewController, MotionDelegate {
     func updateViewControllerForSessionState(state: MCSessionState, peer peerID: MCPeerID?) {
         switch state {
         case MCSessionState.Connected:
-            if let peer = peerID {
-                self.connectionLabel.text = peer.displayName
+            // Update views
+            // Make sure peerID isn't nil
+            if let peerID = peerID {
+                self.connectionLabel.text = peerID.displayName
                 self.connectionLabel.textColor = UIColor.jarvis_gunMetal()
             }
-            self.motionController.startGettingDeviceMotionUpdates()
             self.showConnectedGradient()
-            
-            self.motionDetectedGradientView = MotionDetectedGradientView(frame: self.view.bounds)
+            //Start up motion updates
+            self.motionController.startGettingDeviceMotionUpdates()
+            // Add motion detected gradient view for
+            self.motionDetectedGradientView = JARMotionDetectedGradientView(frame: self.view.bounds)
             self.motionDetectedGradientView?.alpha = 0.0
             if let motionDetectedGradientView = self.motionDetectedGradientView {
                 self.view.addSubview(motionDetectedGradientView)
             }
         case MCSessionState.Connecting:
-            self.connectionLabel.text = "Connecting"
+            // Update views
+            self.connectionLabel.text = JARLocalizedStrings.connecting()
             self.connectionLabel.textColor = UIColor.jarvis_lightBlue()
         case MCSessionState.NotConnected:
-            self.connectionLabel.text = "Not Connected"
+            // Update views
+            self.connectionLabel.text = JARLocalizedStrings.notConnected()
             self.connectionLabel.textColor = UIColor.jarvis_lightBlue()
+            self.hideConnectedGradient()
+            // Stop motion updates
             self.motionController.motionManager.stopDeviceMotionUpdates()
             self.motionDetectedGradientView?.removeFromSuperview()
         }
     }
     
-    // MARK: MultipeerDelegate
+    // MARK: JARMultipeerDelegate
     
     override func didChangeState(state: MCSessionState, peer peerID: MCPeerID, forSession session: MCSession) {
         self.updateViewControllerForSessionState(state, peer: peerID)
     }
     
-    // MARK: MotionDelegate
+    // MARK: JARMotionDelegate
     
     func detectedMotionWithPayload(payload: String) {
         self.multipeerController.sendMessage(payload)
@@ -83,19 +89,21 @@ class MotionViewController: BaseViewController, MotionDelegate {
     // MARK: Animations
     
     func showConnectedGradient() {
-        self.connectedGradientView = ConnectedGradientView(frame: self.view.bounds)
+        // Show that connection is made
+        self.connectedGradientView = JARConnectedGradientView(frame: self.view.bounds)
         self.connectedGradientView?.alpha = 0.0
         
         if let connectedGradientView = self.connectedGradientView {
             self.view.addSubview(connectedGradientView)
         }
-        
+        // Animate it
         UIView.animateWithDuration(self.connectedAnimationDuration, delay: 0.0, options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
             self.connectedGradientView?.alpha = 1.0
             }, completion: nil)
     }
     
     func hideConnectedGradient() {
+        // Show there is no connection
         UIView.animateWithDuration(self.connectedAnimationDuration, delay: 0.0, options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
             self.connectedGradientView?.alpha = 0.0
             }) { (finished) -> Void in
@@ -104,6 +112,7 @@ class MotionViewController: BaseViewController, MotionDelegate {
     }
     
     func showAndHideMotionDetectedGradien() {
+        // Create a flash effect with the gradient view
         UIView.animateWithDuration(self.showMotionDetectedAnimationDuration, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
             self.motionDetectedGradientView?.alpha = 1.0
             }) { (finished) -> Void in

@@ -1,5 +1,5 @@
 //
-//  MultipeerController.swift
+//  JARJARMultipeerController.swift
 //  Jarvis-iOS-Swift
 //
 //  Created by Kyle Yoon on 4/21/15.
@@ -9,32 +9,32 @@
 import Foundation
 import MultipeerConnectivity
 
-protocol MultipeerDelegate {
+protocol JARMultipeerDelegate {
     func didFoundPeer(peerID: MCPeerID, forSession session: MCSession)
     func didChangeState(state: MCSessionState, peer peerID: MCPeerID, forSession session: MCSession)
 }
 
-class MultipeerController: SessionDelegate, BrowserDelegate {
+class JARMultipeerController: JARSessionDelegate, JARBrowserDelegate {
     
     let displayName: String = UIDevice.currentDevice().name
     let jarvisServiceType = "yoonapps-jarvis"
-    let session: Session
-    let browser: Browser
-    var delegate: MultipeerDelegate?
+    let session: JARSession
+    let browser: JARBrowser
+    var delegate: JARMultipeerDelegate?
     
     // Singleton via Struct
     
-    class var sharedInstance: MultipeerController {
+    class var sharedInstance: JARMultipeerController {
         struct Singleton {
-            static let instance = MultipeerController()
+            static let instance = JARMultipeerController()
         }
         
         return Singleton.instance
     }
     
     init() {
-        session = Session(displayName: displayName, delegate: nil)
-        browser = Browser(mcSession: session.mcSession, delegate: nil)
+        session = JARSession(displayName: displayName, delegate: nil)
+        browser = JARBrowser(mcSession: session.mcSession, delegate: nil)
         session.delegate = self
         browser.delegate = self
     }
@@ -47,14 +47,22 @@ class MultipeerController: SessionDelegate, BrowserDelegate {
         browser.stopBrowsing()
     }
     
-    // MARK: SessionDelegate
+    func restartBrowsing() {
+        self.stopBrowsing()
+        self.startBrowsing()
+    }
+    
+    // MARK: JARSessionDelegate
     
     func didChangeState(state: MCSessionState, peer peerID: MCPeerID, forSession session: MCSession) {
         self.delegate?.didChangeState(state, peer: peerID, forSession: session)
         self.setIdleTimerForState(state)
+        if state == MCSessionState.NotConnected {
+            self.browser.currentPeer = nil
+        }
     }
     
-    // MARK: BrowserDelegate
+    // MARK: JARBrowserDelegate
     
     func foundPeer(peerID: MCPeerID) {
         self.delegate?.didFoundPeer(peerID, forSession: session.mcSession)
@@ -65,6 +73,11 @@ class MultipeerController: SessionDelegate, BrowserDelegate {
     func sendMessage(message: String) -> Bool {
         var isQueued = false
         if session.currentState == .Connected && browser.currentPeer != nil {
+            // Faking successful queue of data
+            if JARTestHelper.sharedInstance.isUnitTesting {
+                isQueued = true
+                return isQueued
+            }
             // Since we checked that browser.currentPeer isn't nil, force unwrap.
             let currentPeer = browser.currentPeer!
             let payload = message.dataUsingEncoding(NSUTF8StringEncoding)

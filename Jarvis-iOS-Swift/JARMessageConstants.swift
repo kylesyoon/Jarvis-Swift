@@ -1,5 +1,5 @@
 //
-//  MessageConstants.swift
+//  JARMessageConstants.swift
 //  Jarvis-iOS-Swift
 //
 //  Created by Kyle Yoon on 4/21/15.
@@ -8,12 +8,12 @@
 
 import Foundation
 
-struct MessagePayload {
+struct JARMessagePayload {
+    
     static let Next = "NEXT"
     static let Back = "BACK"
     static let Present = "PRESENT"
     static let ESC = "ESC"
-    static let Mute = "MUTE"
-    static let Unmute = "UNMUTE"
     static let Restart = "RESTART"
+    
 }
